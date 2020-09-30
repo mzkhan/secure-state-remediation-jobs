@@ -42,6 +42,8 @@ class NetworkSecurityGroupClosePort22(object):
         :rtype: dict
         :raises: KeyError, JSONDecodeError
         """
+        logging.info("Unparsed params: ")
+        logging.info(payload)
         remediation_entry = json.loads(payload)
 
         security_group_name = remediation_entry["notificationInfo"]["FindingInfo"][
